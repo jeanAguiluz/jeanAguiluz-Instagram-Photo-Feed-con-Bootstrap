@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Photo feed</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="nav.html" />
+  </head>
+
+  <body>
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-1" href="#">
+        <i class="fa-brands fa-instagram text-dark"></i>
+        <span class="fw-bold text-dark">Instagram</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createNewPost">
+                Create new post
+              </button>
+
+              <div class="modal fade" id="createNewPost" tabindex="-1" aria-labelledby="createNewPost"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="createNewPostLabel ">Create new post</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1" class="p-1 fw-bold mb-1">Caption</label>
+                        <textarea class="form-control mt-0" id="exampleFormControlTextarea1" rows="3">
+                                                </textarea>
+                        <div class="d-flex align-items-center gap-2 mt-2 ps-1">
+                          <button type="button"
+                            class="btn btn-light border text-secondary d-flex align-items-center justify-content-center"
+                            style="width: 30px; height: 30px; padding: 0;">
+                            <i class="fa-solid fa-camera text-dark"></i>
+                          </button>
+                          <button type="button"
+                            class="btn btn-light border text-secondary d-flex align-items-center justify-content-center"
+                            style="width: 30px; height: 30px; padding: 0;">
+                            <i class="fa-solid fa-location-dot text-dark"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                <li><a class="dropdown-item" href="#">Privace and data</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-danger" href="#">Login</a>
+                </li>
+              </ul>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="container-fluid mt-1 justify-content-center">
+    <ul class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+          role="tab" aria-controls="nav-home" aria-selected="true">
+          <i class="fa-solid fa-table-cells"></i>
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
+          role="tab" aria-controls="nav-profile" aria-selected="false">
+          <i class="fa-solid fa-square"></i>
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content mt-3" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="container-fluid">
+          <div class="row mb-3">
+            <div class="col-md-4"><img src="https://picsum.photos/id/237/800/800" class="img-fluid" alt="perrito">
+            </div>
+            <div class="col-md-4"><img src="https://picsum.photos/id/822/800/800" class="img-fluid" alt="grupo"></div>
+            <div class="col-md-4"><img src="https://picsum.photos/id/164/800/800" class="img-fluid" alt="croatia"></div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-4"><img src="https://picsum.photos/id/823/800/800" class="img-fluid" alt="mujer">
+            </div>
+            <div class="col-md-4"><img src="https://picsum.photos/id/857/800/800" class="img-fluid" alt="ciudad">
+            </div>
+            <div class="col-md-4"><img src="https://picsum.photos/id/1077/800/800" class="img-fluid" alt="deporte">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-4"><img src="https://picsum.photos/id/348/800/800" class="img-fluid" alt="Imagen 7">
+            </div>
+            <div class="col-md-4"><img src="https://picsum.photos/id/366/800/800" class="img-fluid" alt="Imagen 8"></div>
+            <div class="col-md-4"><img src="https://picsum.photos/id/395/800/800" class="img-fluid" alt="Imagen 9"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <div class="container mt-3" style="max-width: 500px;">
+          <div class="row justify-content-center g-4">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="d-flex justify-content-between align-items-center p-2">
+                  <strong>My Crazy dog Spark</strong>
+                  <span class="text-muted small">08/26</span>
+                </div>
+                <img src="https://picsum.photos/id/237/300/300" class="card-img-top rounded-0" alt="perrito">
+                <div class="d-flex justify-content-between p-2">
+                  <div class="d-flex gap-2">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <i class="fa-regular fa-bookmark"></i>
+                </div>
+                <div class="p-2">
+                  <strong>204 Likes</strong>
+                  <p>This is an example of a very good photo that you can post on Instagram</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="card">
+                
+                <div class="d-flex justify-content-between align-items-center p-2">
+                  <strong>The greatness of Croatia</strong>
+                  <span class="text-muted small">04/09</span>
+
+                </div>
+                <img src="https://picsum.photos/id/164/300/300" class="card-img-top rounded-0" alt="croatia">
+                <div class="d-flex justify-content-between p-2">
+                  <div class="d-flex gap-2">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <i class="fa-regular fa-bookmark"></i>
+                </div>
+                <div class="p-2">
+                  <strong>26985 Likes</strong>
+                  <p>This is an example of a very good photo that you can post on Instagram</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="d-flex justify-content-between align-items-center p-2">
+                  <strong>Amazing Ride!</strong>
+                  <span class="text-muted small">06/10</span>
+                </div>
+                <img src="https://picsum.photos/id/1077/900/900" class="card-img-top rounded-0" alt="deporte">
+                <div class="d-flex justify-content-between p-2">
+                  <div class="d-flex gap-2">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <i class="fa-regular fa-bookmark"></i>
+                </div>
+                <div class="p-2">
+                  <strong>204 Likes</strong>
+                  <p>This is an example of a very good photo that you can post on Instagram</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
